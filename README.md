@@ -1,5 +1,10 @@
 # RPM-MGA demo with ESAurban-SpineOpt model instance
 
+- Start: Clone the repository
+```bash
+git clone https://github.com/EnergySystemAnalysis-ETH/ESAurban-RPM-MGA-demo.git
+```
+
 ## Environment setup
 
 - Use the root directory of this repository as the working directory in the following commands.

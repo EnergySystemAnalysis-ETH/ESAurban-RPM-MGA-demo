@@ -3,12 +3,14 @@
 .spinetoolbox/local/
 Manifest.toml
 logs/
-OutputDBs/*.sqlite
+
 
 *.ini
 *.log
 *.bak*
 *.zip
 *.sh
-slurm-out/
-log-julia/
+slurm-out/*
+log-julia/*
+visualization/*
+OutputDBs/*.sqlite
