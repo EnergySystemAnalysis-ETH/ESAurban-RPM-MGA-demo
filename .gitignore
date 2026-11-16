@@ -1,0 +1,14 @@
+.claude/
+.vscode/
+.spinetoolbox/local/
+Manifest.toml
+logs/
+OutputDBs/*.sqlite
+
+*.ini
+*.log
+*.bak*
+*.zip
+*.sh
+slurm-out/
+log-julia/

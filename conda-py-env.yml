@@ -1,0 +1,11 @@
+# Create a new conda environment from this file:
+# `conda env create -f conda-py-env.yml`
+name: spine-tools-demo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14
+  - pip
+  - pip:
+      - spinedb-api==0.36.7     # needed by SpineInterface.jl and SpineOpt.jl to read Spine databases
+      - spinetoolbox==0.10.10   # optional: Spine Toolbox GUI
