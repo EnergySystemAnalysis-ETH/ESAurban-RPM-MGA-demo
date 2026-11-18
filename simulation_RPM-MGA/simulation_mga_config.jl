@@ -45,8 +45,10 @@ function simulation_run_mga(mga_input_db::String, mga_method::String, mga_slack:
         mip_solver=optimizer_with_attributes(Gurobi.Optimizer, 
             "Threads" => solver_threads, "Method" => 2, "NodeMethod" => 2, "MIPFocus" => 0, 
         ),
-        log_file_path="log-julia/runSpineOpt-$(get(ENV, "SLURM_ARRAY_TASK_ID", "local"))-$(db_report_term)-$(model_scenario).txt",
-        filters=Dict("scenario" => model_scenario),
+        log_file_path=joinpath(
+            log_dir, 
+            "runSpineOpt-$(get(ENV, "SLURM_ARRAY_TASK_ID", "local"))-$(db_report_term)-$(model_scenario).txt"
+        ),
         alternative=model_scenario
     )
     @info "Simulation with $(mga_method) MGA method (slack=$(mga_slack)) on scenario '$(model_scenario)' completed."
