@@ -49,6 +49,7 @@ function simulation_run_mga(mga_input_db::String, mga_method::String, mga_slack:
             log_dir, 
             "runSpineOpt-$(get(ENV, "SLURM_ARRAY_TASK_ID", "local"))-$(db_report_term)-$(model_scenario).txt"
         ),
+        filters=Dict("scenario" => model_scenario),
         alternative=model_scenario
     )
     @info "Simulation with $(mga_method) MGA method (slack=$(mga_slack)) on scenario '$(model_scenario)' completed."
