@@ -35,6 +35,7 @@ function simulation_run_mga(mga_input_db::String, mga_method::String, mga_slack:
 
     @info "Running simulation with $(mga_method) MGA method (slack=$(mga_slack)) on scenario '$(model_scenario)' ... "
     
+    log_dir = joinpath(@__DIR__, "log-julia"); mkpath(log_dir)  # no-op if it already exists
     solver_threads = Threads.nthreads()
     m = run_spineopt(
         input_db_url, output_db_url; upgrade=true, 

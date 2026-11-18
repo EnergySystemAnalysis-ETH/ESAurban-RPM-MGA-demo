@@ -1,16 +1,17 @@
 .claude/
 .vscode/
 .spinetoolbox/local/
+.cache/
 Manifest.toml
-logs/
-
+*log-*
+*-out
+*temp*
+*experiment*
 
 *.ini
-*.log
 *.bak*
 *.zip
 *.sh
-slurm-out/*
-log-julia/*
+
 visualization/*
 OutputDBs/*.sqlite

@@ -1,16 +1,16 @@
 import Pkg
-proj = Base.current_project(@__DIR__) === nothing ? 
+let proj = Base.current_project(@__DIR__) === nothing ? 
     Base.current_project(pwd()) : 
     Base.current_project(@__DIR__)
-if proj === nothing
-    @error "No Project.toml found in $(@__DIR__) or\n
-            the currect working directory $(pwd()) or\n
-            any of their parent directories."
-    @info "Please ensure that a Julia project environment contains either\n
-            (1) this script $(@__FILE__) or (2) the working directory."
-    exit(1)
+    isnothing(proj) && begin
+        @error "No Project.toml found above \'$(@__DIR__)\' or\n
+                the currect working directory \'$(pwd())\'."
+        @info "Please ensure that a Julia project environment contains either\n
+                (1) this script $(@__FILE__) or\n(2) the working directory  (esp. if you run this script from REPL)."
+        exit(1)
+    end
+    Pkg.activate(dirname(proj); io=devnull)
 end
-Pkg.activate(dirname(proj))
 
 # ---- run definitions ----
 input_db_core = "MGA"

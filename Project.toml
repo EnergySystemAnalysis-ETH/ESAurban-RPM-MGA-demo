@@ -19,8 +19,8 @@ SpineOpt = "0d8fc150-4032-4b6e-9540-20efcb304861"
 PlotMGA = {rev = "main", url = "https://github.com/EnergySystemAnalysis-ETH/PlotMGA.jl"}
 
 [compat]
-Gurobi = "1.9.3"
-JuMP = "1.32.1"
-PyCall = "1.97.0"
-SpineInterface = "0.17.2"
-SpineOpt = "0.11.4"
+Gurobi = "=1.9.3"
+JuMP = "=1.32.1"
+PyCall = "=1.97.0"
+SpineInterface = "=0.17.2"
+SpineOpt = "=0.11.4"
