@@ -8,6 +8,7 @@ family-names = "Kozerski"
 given-names = "Kacper"
 
 [deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
 JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
 PlotMGA = "76d04dbd-c4c6-4f69-b5ce-df64e332f103"
@@ -19,6 +20,7 @@ SpineOpt = "0d8fc150-4032-4b6e-9540-20efcb304861"
 PlotMGA = {rev = "main", url = "https://github.com/EnergySystemAnalysis-ETH/PlotMGA.jl"}
 
 [compat]
+DataFrames = "=1.8.3"
 Gurobi = "=1.9.3"
 JuMP = "=1.32.1"
 PyCall = "=1.97.0"
