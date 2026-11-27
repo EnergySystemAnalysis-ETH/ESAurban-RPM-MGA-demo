@@ -8,7 +8,7 @@ authors:
 - family-names: Kozerski
   given-names: Kacper
 title: "ESAurban model (SpineOpt) for RPM MGA demonstration"
-version: 
-doi: 
+version: latest
+doi: 10.5281/zenodo.24591109
 date-released: 2026-11-27
 url: https://github.com/EnergySystemAnalysis-ETH/ESAurban-RPM-MGA-demo

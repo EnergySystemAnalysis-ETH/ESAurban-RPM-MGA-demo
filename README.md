@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/github/1460335097.svg)](https://doi.org/10.5281/zenodo.24591109)
+
 # RPM-MGA demo with ESAurban-SpineOpt model instance
 
 This repository presents a multi-energy system optimisation model (ESAurban-SpineOpt) of the urban residential energy system of Wohlen (AG) Switzerland, formulated by the [SpineOpt.jl](https://github.com/spine-tools/SpineOpt.jl) modelling framework.
