@@ -1,14 +1,6 @@
 import Pkg
-let proj = Base.current_project(@__DIR__) === nothing ? 
-    Base.current_project(pwd()) : 
-    Base.current_project(@__DIR__)
-    isnothing(proj) && begin
-        @error "No Project.toml found above \'$(@__DIR__)\' or\n
-                the currect working directory \'$(pwd())\'."
-        @info "Please ensure that a Julia project environment contains either\n
-                (1) this script $(@__FILE__) or\n(2) the working directory  (esp. if you run this script from REPL)."
-        exit(1)
-    end
+let proj = Base.current_project(@__DIR__)
+    isnothing(proj) && error("No Project.toml found above $(@__DIR__)")
     Pkg.activate(dirname(proj); io=devnull)
 end
 
