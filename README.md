@@ -19,7 +19,7 @@ julia runSpineOpt-1-HSJ-MultiEPS.jl
 julia runSpineOpt-2-Fuzzy-MultiEPS.jl
 ```
 
-- Results to be stored in `OutputDBs/` as `.sqlite` databases (see examples in the release).
+- Results to be stored in `OutputDBs/` as `.sqlite` databases (see examples in the release `v0.1.0`).
 - To plot the comparison of the two MGA algorithms:
 ```shell
 cd ./visualisation
